@@ -4,7 +4,7 @@ Plugin Name: starter Plugin
 Plugin URI:  https://udemy.com/
 Description: Codice base per progettazione plugin
 Version:     1.0
-Author:      Piero Aiello
+Author:      Maurizio Strazzullo
 Author URI:  https://pieroaiello.com
 Text Domain: starter_plugin
 Domain Path: /languages
