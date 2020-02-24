@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: starter Plugin
-Plugin URI:  https://udemy.com/
+Plugin URI:  https://name_plugin_site
 Description: Codice base per progettazione plugin
 Version:     1.0
 Author:      Maurizio Strazzullo
