@@ -5,7 +5,7 @@ Plugin URI:  https://udemy.com/
 Description: Codice base per progettazione plugin
 Version:     1.0
 Author:      Maurizio Strazzullo
-Author URI:  https://pieroaiello.com
+Author URI:  https://www.stramadesign.it
 Text Domain: starter_plugin
 Domain Path: /languages
 License:     GPL2
