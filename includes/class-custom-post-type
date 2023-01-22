@@ -1,0 +1,75 @@
+<?php  
+namespace cnc_design_servizi;
+
+if (!defined('WPINC')) {
+    die;
+  }
+
+class CncDesignCPT {
+    public function __construct() {
+        add_action( 'init',  array( $this, 'register_my_cpts_servizi' ));
+    }
+
+    function register_my_cpts_servizi() {
+
+        /**
+         * Post Type: servizi.
+         */
+    
+        $labels = [
+            "name" => esc_html__( "servizi", "cncdesign" ),
+            "singular_name" => esc_html__( "servizio", "cncdesign" ),
+            "menu_name" => esc_html__( "I nostri servizi", "cncdesign" ),
+            "all_items" => esc_html__( "Tutti i servizi", "cncdesign" ),
+            "add_new" => esc_html__( "Aggiungi nuovo", "cncdesign" ),
+            "add_new_item" => esc_html__( "Aggiungi nuovo servizio", "cncdesign" ),
+            "edit_item" => esc_html__( "Modifica servizio", "cncdesign" ),
+            "new_item" => esc_html__( "Nuovo servizio", "cncdesign" ),
+            "view_item" => esc_html__( "Visualizza servizio", "cncdesign" ),
+            "view_items" => esc_html__( "Vedi servizi", "cncdesign" ),
+            "search_items" => esc_html__( "Cerca servizio", "cncdesign" ),
+            "not_found" => esc_html__( "Nessun servizio trovato", "cncdesign" ),
+            "not_found_in_trash" => esc_html__( "Nessun servizio trovato nel cestino", "cncdesign" ),
+            "parent" => esc_html__( "Servizio genitore", "cncdesign" ),
+            "featured_image" => esc_html__( "Immagine in evidenza per questo servizio", "cncdesign" ),
+            "set_featured_image" => esc_html__( "Imposta immagine in evidenza per questo servizio", "cncdesign" ),
+            "remove_featured_image" => esc_html__( "Rimuovi immagine in evidenza per questo servizio", "cncdesign" ),
+    "use_featured_image" => esc_html__( "Usa immagine in evidenza", "cncdesign" ),
+            "archives" => esc_html__( "Archivio servizi", "cncdesign" ),
+            "insert_into_item" => esc_html__( "Inserrisci nel servizio", "cncdesign" ),
+            "filter_items_list" => esc_html__( "Filtra servizi", "cncdesign" ),
+            "items_list" => esc_html__( "Elenco servizio", "cncdesign" ),
+            "parent_item_colon" => esc_html__( "Servizio genitore", "cncdesign" ),
+        ];
+    
+        $args = [
+            "label" => esc_html__( "servizi", "cncdesign" ),
+            "labels" => $labels,
+            "description" => "",
+            "public" => true,
+            "publicly_queryable" => true,
+            "show_ui" => true,
+            "show_in_rest" => true,
+            "rest_base" => "servizi",
+            "rest_controller_class" => "WP_REST_Posts_Controller",
+            "rest_namespace" => "wp/v2",
+            "has_archive" => "servizi",
+            "show_in_menu" => true,
+            "show_in_nav_menus" => true,
+            "delete_with_user" => false,
+            "exclude_from_search" => false,
+            "capability_type" => "post",
+            "map_meta_cap" => true,
+            "hierarchical" => false,
+            "can_export" => false,
+            "rewrite" => [ "slug" => "servizi", "with_front" => true ],
+            "query_var" => true,
+            "menu_icon" => "dashicons-admin-tools",
+            "supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields" ],
+            "show_in_graphql" => false,
+        ];
+    
+        register_post_type( "servizi", $args );
+    }
+    
+}

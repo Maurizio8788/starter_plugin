@@ -3,7 +3,7 @@
 /**
 * classe principale starter plugin
 **/
-namespace starter_plugin;
+namespace cnc_design_servizi;
 
 class Info{
 

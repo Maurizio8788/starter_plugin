@@ -1,43 +1,40 @@
 <?php
 /*
-Plugin Name: starter Plugin
+Plugin Name: Cnc Design Servizi
 Plugin URI:  https://name_plugin_site
-Description: Codice base per progettazione plugin
+Description: Plugin per la gestione dei servizi di cnc design
 Version:     1.0
 Author:      Maurizio Strazzullo
 Author URI:  https://www.stramadesign.it
-Text Domain: starter_plugin
+Text Domain: cnc_design_servizi
 Domain Path: /languages
 License:     GPL2
 */
-namespace starter_plugin;
+namespace cnc_design_servizi;
 
 if (!defined('WPINC')) {
   die;
 }
 
-Define(PLUGIN_DIR , dirname(__FILE__));
-
-
-
+define( 'MY_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'MY_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 
 
 register_activation_hook( __FILE__, __NAMESPACE__ . '\\activation' );
   function activation(){
-    require_once PLUGIN_DIR. '/includes/class-activator.php';
+    require_once MY_PLUGIN_PATH . '/includes/class-activator.php';
     Activator::attivazione();
-
   }
 
 
 register_deactivation_hook( __FILE__,  __NAMESPACE__ .'\\deactivation' );
 function deactivation(){
-  require_once PLUGIN_DIR. 'includes/class-deactivator.php';
+  require_once MY_PLUGIN_PATH. 'includes/class-deactivator.php';
   Deactivator::disattivazione();
 }
 
-require_once PLUGIN_DIR. '/includes/class-plugin.php';
-$starter = new starter_plugin();
+require_once MY_PLUGIN_PATH . '/includes/class-plugin.php';
+$starter = new CncDesignServizi();
 
 ?>
