@@ -23,7 +23,7 @@ $query = new WP_Query($args);
         $thumbnail_url = $thumbnail_url[0];
       ?>
 
-    <div class="col-lg-<?php echo $columns; ?> col-md-6 col-sm-6 col-xs-12">
+    <div class="col-lg-<?php echo $columns; ?> col-md-6 col-sm-6 col-xs-12">5f76ad2fe13df41cce826da9427bff7899a6b334
         <div class="service-layout1">
             <div class="image-box">
                 <img src="<?php echo $thumbnail_url; ?>" alt="image">

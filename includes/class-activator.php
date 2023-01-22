@@ -3,7 +3,7 @@
 /**
 * classe di attivazione
 **/
-namespace cnc_design_servizi;
+namespace starter_plugin;
 
 class  Activator{
 

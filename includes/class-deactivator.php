@@ -3,7 +3,7 @@
 /**
 * classe di disattivazione
 **/
-namespace cnc_design_servizi;
+namespace starter_plugin;
 
 class  Deactivator{
 
